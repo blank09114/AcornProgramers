@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+/*전체 본문*/
+.userFormContainer{
+	display: flex;
+	justify-content: center;
+	padding: 50px 0px 50px 0px;
+	background-color: #f9fafb;
+}
+
+/*입력 폼*/
+.userForm{
+	border-radius: 10px;
+	padding: 30px 40px;
+	width: 400px;
+	box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+	background-color: white;
+}
+.userForm h2{
+	text-align: center;
+}
+.userForm label{
+	display: block;
+	margin-bottom: 15px;
+}
+
+/*입력 칸*/
+.inputBox {
+	margin-bottom: 20px;
+}
+.userInput {
+	display: flex;
+	align-items: center;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	padding: 8px 12px;
+}
+.userInput img {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	filter: grayscale(100%) contrast(120%);
+}
+.userInput input {
+	border: none;
+	outline: none;
+	width: 100%;
+	font-size: 14px;
+	padding: 10px 0;
+}
+
+/*로그인 버튼 구간*/
+.submitBtn{
+	margin: 30px 0px;
+}
+.submitBtn button{
+	border: none;
+	width: 100%;
+	height: 50px;
+	color: white;
+    background-color: gray;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.submitBtn button:hover{
+	background-color: black;
+}
+
+/*아이콘 버튼 구간*/
+.iconBtn {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	margin-top: 20px;
+}
+.social {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	cursor: pointer;
+}
+.social img{
+	width: 50px;
+	height: 50px;
+}
+.social p {
+	margin: 0;
+	font-size: 14px;
+	color: #333;
+}
+.g_id_signin{
+	height: 50px;
+}
+
+/*하단 링크*/
+.link{
+	margin: 30px 0px;
+	display: flex;
+	justify-content: center;
+}
+.link a {
+    text-decoration: none;
+    color: #3498db;
+    font-size: 14px;
+}
+.link a:hover {
+    text-decoration: underline;
+}

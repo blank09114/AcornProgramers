@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+body{
+	margin: 0;
+}
+
+.headerCotainer{
+	border: 1px solid black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100px;
+	background-color: black;
+}
+
+.navHeader{
+	margin-left: 60px;
+}
+.navHeader a{
+	font-size: 18px;
+	margin-right: 15px;
+	color: #9b9d9e;
+	text-decoration: none;
+	font-weight: bold;
+}
+.navHeader a:hover{
+	color:white;
+}
+
+.userHeader{
+	margin-right: 20px;
+}
+.userHeader button {
+	padding: 10px 20px;
+	width: 120px;
+	font-size: 14px;
+	background-color: white;
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.userHeader button:hover{
+	background-color: gray;
+	color: white;
+}
+
+.userHeader span{
+	color:white;
+	margin-right: 10px;
+}

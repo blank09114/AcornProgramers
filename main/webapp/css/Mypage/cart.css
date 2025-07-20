@@ -1,0 +1,361 @@
+@charset "UTF-8";
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px 0 30px;
+  color: #333;
+  font-size: 28px;
+  font-weight: 700;
+  position: relative;
+}
+
+h2:after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #0056b3;
+  margin: 12px auto 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Header Styles */
+.MypageHeader {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.MypageHeader div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.MypageHeader div:last-of-type {
+  border-bottom: none;
+}
+
+.MypageHeader a {
+  font-weight: 600;
+  font-size: 16px;
+  color: #0056b3;
+  position: relative;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: #f0f7ff;
+}
+
+.MypageHeader a:hover {
+  color: #003d82;
+  background-color: #e1f0ff;
+}
+
+.MypageHeader span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Button styling - 여기가 수정된 부분 */
+.button-container {
+  display: flex;
+  justify-content: flex-end !important;
+  border-bottom: none !important;
+  padding-top: 15px !important;
+}
+
+.button-container #addressBtn {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 200px;
+  text-align: center;
+}
+
+/* 호버 효과를 버튼에 올바르게 적용 */
+.button-container #addressBtn:hover {
+  background-color: #003d82;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* 액티브 효과를 버튼에 올바르게 적용 */
+.button-container #addressBtn:active {
+  transform: scale(0.98);
+}
+
+/* Cart Styles */
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  position: relative;
+}
+
+.cart-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+}
+
+.cart-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 25px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.cart-item-info p {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0056b3;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.cart-item-info p:after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #0056b3;
+  border-radius: 50%;
+  margin-left: 8px;
+}
+
+.delete-button {
+  background-color: #ff3366;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(255, 51, 102, 0.25);
+}
+
+.delete-button:hover {
+  background-color: #e60046;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(255, 51, 102, 0.35);
+}
+
+.delete-button:active {
+  transform: scale(0.98);
+}
+
+/* User information styling */
+.MypageHeader div span,
+.MypageHeader div:nth-child(4) {
+  font-size: 16px;
+  padding: 10px 15px;
+  background-color: #f1f8ff;
+  border-radius: 6px;
+  color: #0056b3;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.MypageHeader div:nth-child(4) {
+  background-color: #fff8e6;
+  color: #e6a400;
+}
+
+/* Empty cart message styling */
+.MypageHeader > p {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin: 20px 0;
+  border: 2px dashed #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.MypageHeader > p:before {
+  content: "🛒";
+  font-size: 36px;
+  display: block;
+}
+
+/* Cart summary (추가 기능으로 활용 가능) */
+.cart-summary {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cart-summary-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.cart-total-label {
+  font-size: 18px;
+  font-weight: 500;
+  color: #555;
+}
+
+.cart-total-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .MypageHeader {
+    padding: 15px;
+  }
+  
+  .button-container {
+    justify-content: center !important;
+  }
+  
+  .button-container #addressBtn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .cart-item img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .cart-item-info {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cart-item-info p:after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .MypageHeader div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .button-container #addressBtn {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  .MypageHeader div span,
+  .MypageHeader div:nth-child(4) {
+    width: 100%;
+  }
+}

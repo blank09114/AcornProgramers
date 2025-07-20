@@ -1,0 +1,480 @@
+/* 전체 서식 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+/*body { background-color: #f9fafb; }*/
+
+a{
+    text-decoration: none;
+    color: inherit;
+ }
+
+/* display 속성 */
+/* center - center */
+.topBannerSlide, .bottomBanner, .boardWrap, .communityBoard a, .adBox
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 컨테이너 서식 */
+.container
+{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+.topBanner{
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.1);
+    background-color: white;
+    width: 100%;
+    margin: auto;
+}
+.bottomBanner{
+	width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+}
+.ranking{
+    border-radius: 5px;
+    /*box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.1);*/
+    width: 80%;
+}
+.community{
+    border-radius: 5px;
+    /*box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.1);*/
+}
+.bottomRightBanner{
+	border-left: 1px solid rgb(100, 100, 100);
+    /*box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.1);*/
+}
+.middleBanner{
+	display: flex;
+	justify-content: center;
+	margin-top: 100px;
+	gap: 70px;
+}
+.middleBanner button{
+	display: flex;
+	width: 100px;
+	height: 100px;
+	border: none;
+	border-radius: 30px;
+	font-size: 50px;
+	color: white;
+	font-weight: bold;
+	justify-content: center;
+	align-items: center;
+	border: 0.5px solid #dce1e5;
+	background-color: white;
+}
+.middleBanner button:hover{
+	background-color: #f3f4f5;
+}
+.middleBanner img{
+	width: 50px;
+	height: 50px;
+}
+.middleBanner div{
+	text-align: center;
+}
+.middleBanner span{
+	font-weight: bold;
+	padding-top: 10px;
+}
+
+/* 슬라이드 공통 서식 */
+.topBanner, .community
+{
+    position: relative;
+}
+.topBannerSlide, .communitySlide
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 120%;
+
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.now
+{
+    opacity: 1;
+    z-index: 1;
+}
+
+/* 슬라이드 버튼  */
+.topBanner .prevBtn, .topBanner .nextBtn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    border: none;
+    background-color: transparent;
+    
+    font-size: 40px;
+    cursor: pointer;
+    color:white;
+}
+.prevBtn { left: 10px; } .nextBtn { right: 10px; }
+
+.community .prevBtn, .community .nextBtn {
+	color: black;
+	border: none;
+    background-color: transparent;
+    font-size: 30px;
+    cursor: pointer;
+}
+.slideBtnDiv{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+/* 상단 배너 */
+.topBanner
+{
+    height: 300px;
+}
+.topBannerSlide
+{
+    background-color: rgba(255, 255, 255, 0.3);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+   
+}
+.topBannerSlide a
+{
+    width: 400px;
+    height: 80px;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: black;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+
+    font-size: 36px;
+    text-align: center;
+    line-height: 80px;
+    color: white;
+}
+.topBannerSlide a:hover
+{
+    background-color: white;
+    color: black;
+}
+
+/* 슬라이드 1 */
+.topBannerSlide1
+{
+    background-image: url("../../image/Main/slide1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* 슬라이드 2 */
+.topBannerSlide2
+{
+    background-image: url("../../image/Main/slide2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* 슬라이드 3 */
+.topBannerSlide3
+{
+    background-image: url("../../image/Main/slide3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+/* 하단 배너 */
+.bottomBanner
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 30px;
+}
+
+
+
+/* 하단 좌측 배너 */
+.bottomLeftBanner
+{
+    width: 800px;
+    height: 100%;
+}
+.ranking, .community
+{
+    width: 95%;
+    height: 325px;
+    border-radius: 0 0 5px 5px;
+}
+.community{
+	height: 400px;
+}
+.community { margin-top: 10px; }
+.bannerTitle {
+    width: 100%;
+    font-size: 24px;
+    line-height: 40px;
+    color: #373841;
+    margin: 0;
+}
+.bannerSubtitle{
+	color: #777777;
+}
+.boardWrap {
+    width: 100%;
+}
+
+/* 랭킹 */
+.rankingBoard
+{
+    width: 100%;
+    height: 80%;
+    font-size: 16px;
+    text-align: center;
+    color: black;
+    border-radius: 10px;
+}
+.rankingBoard, .rankingBoard tr, .rankingBoard td
+{
+    border-collapse: collapse;
+    border-bottom: 1px solid #606060;
+}
+.rankingBoard td { height: 30px; }
+
+.tr1
+{
+    background-color: #606060;
+    font-weight: bold;
+    color: white;
+}
+.rank { width: 10%; }
+.name { width: 20%; }
+.score { width: 35%; }
+
+
+
+/* 커뮤니티 */
+.communityBoard
+{
+    width: 100%;
+    height: 80%;
+}
+.communityBoard a
+{
+    width: 100%;
+    height: 20%;
+    border-top: 1px solid rgb(200, 200, 200);
+
+    font-size: 16px;
+}
+.fin { border-bottom: 1px solid rgb(200, 200, 200); }
+.postRank
+{
+    width: 10%;
+    font-weight: bold;
+}
+.postTitle { width: 60%; }
+.postGood, .postRipple{ width: 15%; }
+.postGood { color: red; }
+.postRipple { color: blue; }
+
+.prevBtn, .nextBtn{
+	margin-top: 30px;
+}
+
+
+/* 하단 우측 배너 */
+.bottomRightBanner
+{
+    width: 400px;
+    margin-left: 10px;
+}
+.user, .adBox { width: 100%; }
+
+
+
+/* 회원 정보 */
+.user { height: 30%; }
+.noneLogin, .login
+{
+    width: 100%;
+    height: 100%;
+
+    
+}
+.state
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+}
+.noneLogin p
+{
+    width: 100%;
+    height: 30px;
+
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+}
+
+/* 비로그인 사용자 */
+.noneLogin a
+{
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+
+    border: 1px solid black;
+    background-color: black;
+
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+}
+.noneLogin a:hover
+{
+    background-color: white;
+    color: black;
+}
+
+/* 로그인 */
+/* 로그인 환영 메시지 */
+.login p {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 15px;
+    margin-bottom: 25px;
+    color: #333;
+    text-align: center;
+}
+.login span{
+	color: #25d1d1;
+}
+
+/* 유저 정보 테이블 */
+.userInfo {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+.userInfo tr {
+    height: 50px;
+}
+
+.userInfo td {
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+}
+.tr-1 {
+    font-weight: bold;
+     border-bottom: 1px solid #0080c0;
+}
+.tr-2 {
+    font-weight: 600;
+}
+.userInfo tr td:not(:first-child):not(:last-child) {
+    border-left: 1px solid #0080c0;
+    border-right: 1px solid #0080c0;
+}
+
+/* 광고 */
+.adBox
+{
+    height: 70%;
+	
+    border-top: 1px solid rgb(200, 200, 200);
+
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.adBoxImage
+{
+	width: 90%;
+	
+	
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* 광고 문구 */
+.lol
+{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+
+    background-color: black;
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+
+    overflow: hidden;
+    position: relative;
+}
+.lol span
+{
+    display: inline-block;
+    line-height: 40px;
+    white-space: nowrap;
+    position: absolute;
+    animation: text-animation 7s linear infinite;
+}
+@keyframes text-animation
+{
+    from { left: 100%; }
+    to { left: -100%; }
+}
+
+/* 광고 본문 */
+.ad
+{
+    width: 100%;
+
+    font-size: 50px;
+    color: red;
+}
+
+/* 광고 버튼 */
+.adBox button
+{
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+
+    border: 1px solid #0078ff;
+    background-color: #0078ff;
+
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+}
+.adBox button:hover
+{
+    background-color: white;
+    color:#0078ff;
+}

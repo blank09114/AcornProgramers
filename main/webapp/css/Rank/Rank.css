@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+.rankContainer{
+	background-color: #f9fafb;
+	padding: 50px 0px 50px 0px;
+}
+
+.rankWrapper {
+  width: 75%;
+  margin: 40px auto;
+}
+.rankWrapper h1{
+	text-align: center;
+	font-size: 50px;
+	letter-spacing: 10px
+}
+
+.rankHeader{
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-bottom: 10px;
+  background-color: #606060;
+}
+.rankHeader span{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.ref{
+	flex: 1px;
+}
+.ref-left{
+	margin-left: 30px;
+}
+
+.rankList{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+.rankList:nth-child(odd){
+	background-color: #f3f0cf
+}
+.rankList:nth-child(even){
+	background-color: #f2f2f2;
+}
+.rankList span{
+	font-size: 20px;
+}
+
+.topRank {
+  font-weight: bold;
+  color: #e67e22;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+.pagination a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.pagination a.active {
+  background-color: #ffc107;
+  color: white;
+}
